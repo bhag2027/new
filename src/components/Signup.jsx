@@ -59,7 +59,7 @@ const inputHandler=(event)=>{
 
 
     } else {
-       alert("password and confirmpassword are not") 
+       alert("password and confirmpassword are not same") 
     }
    
  }
@@ -94,7 +94,7 @@ const inputHandler=(event)=>{
                             <button className="btn btn-success" onClick={readvalue}>Register</button>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button className="btn btn-success">Back to login</button>
+                            <a href='/' className="btn btn-success">Back to login</a>
                         </div>
                     </div>
                 </div>
