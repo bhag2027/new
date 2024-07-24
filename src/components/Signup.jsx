@@ -59,7 +59,7 @@ const inputHandler=(event)=>{
 
 
     } else {
-       alert("password and confirmpassword are not") 
+       alert("password and confirmpassword are not same") 
     }
    
  }
