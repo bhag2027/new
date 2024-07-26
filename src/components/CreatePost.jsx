@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 
 const CreatePost = () => {
     const [input,setinput]=useState(
@@ -42,6 +43,7 @@ const readvalue=()=>{
 
   return (
     <div>
+      <NavBar/>
       <h1 align="center"> <u>CREATE A POST </u></h1><br></br>
       
       <div className="container">
