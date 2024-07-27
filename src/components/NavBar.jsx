@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+    const navigate=useNavigate()
+    const logout=()=>{
+        sessionStorage.clear()
+        navigate("/")
+    }
     return (
         <div>
             <nav class="navbar navbar-expand-lg bg-warning">
@@ -18,7 +24,10 @@ const NavBar = () => {
                                 <a class="nav-link" href="/viewall">VIEW POSTS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">VIEW MY POSTS</a>
+                                <a class="nav-link" href="/viewmy">VIEW MY POSTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <button onClick={logout} className="btn btn-secondary">Log out</button>
                             </li>
                             
                         </ul>
