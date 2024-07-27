@@ -11,6 +11,7 @@ const CreatePost = () => {
   
     }
 )
+const [token,settoken]=useState(sessionStorage.getItem("token"))
 
 const inputhandler = (event)=>{
   setinput({...input,[event.target.name]:event.target.value})
@@ -18,7 +19,7 @@ const inputhandler = (event)=>{
 
 const readvalue=()=>{
   console.log(input)
-  axios.post("http://localhost:3030/add",input,{headers:{"token":sessionStorage.getItem("token"),"Content-Type":"application/json"}} ).then(
+  axios.post("http://localhost:3030/add",input,{headers:{"token":token,"Content-Type":"application/json"}} ).then(
     (response)=>{
       console.log(response.data)
       if (response.data.status== "success") 
